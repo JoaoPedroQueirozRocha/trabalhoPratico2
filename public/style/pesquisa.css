@@ -6,6 +6,12 @@
 
 }
 
+
+.fa-star,
+.fa-star-o {
+    color: #e0a31f;
+}
+
 .item {
     margin: 10px;
     width: 20%;
