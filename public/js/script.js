@@ -26,7 +26,7 @@ fetch("https://fakestoreapi.com/products")
       itemDiv.forEach((divItem) => {
         divItem.addEventListener("click", () => {
           const itemId = divItem.id;
-          window.location.href = `item.html?id=${itemId}`;
+          window.location.href = `../src/pages/item.html?id=${itemId}`;
         });
       });
     });
@@ -34,10 +34,14 @@ fetch("https://fakestoreapi.com/products")
 
 function getStars(rating) {
   let starHtml = "";
+  let fullStars = Math.floor(rating);
+  let halfStar = rating % 1 !== 0;
 
   for (let i = 0; i < 5; i++) {
-    if (i < rating) {
+    if (i < fullStars) {
       starHtml += '<i class="fa fa-star"></i>';
+    } else if (halfStar && i === fullStars) {
+      starHtml += '<i class="fa fa-star-half-o"></i>';
     } else {
       starHtml += '<i class="fa fa-star-o"></i>';
     }
