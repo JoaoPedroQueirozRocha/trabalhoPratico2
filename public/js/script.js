@@ -41,7 +41,7 @@ function getStars(rating) {
     if (i < fullStars) {
       starHtml += '<i class="fa fa-star"></i>';
     } else if (halfStar && i === fullStars) {
-      starHtml += '<i class="fa fa-star-half-o"></i>';
+      starHtml += '<i class="fa fa-star-half"></i>';
     } else {
       starHtml += '<i class="fa fa-star-o"></i>';
     }
