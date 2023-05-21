@@ -3,7 +3,7 @@
 * [Descrição](#descrição)
 * [Tecnologias](#tecnologias)
 * [Funcionalidades](#funcionalidades)
-* 
+
 ## Descrição
 Este projeto é um site de e-commerce gerado a partir da api Fake Store API:  http://diwserver.vps.webdock.cloud:8765/
 
