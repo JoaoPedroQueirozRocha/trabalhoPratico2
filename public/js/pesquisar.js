@@ -19,7 +19,7 @@ function search() {
   const pesquisa = inputPesquisa.value.toLowerCase();
 
   const resultado = lista.filter((item) => {
-    const regex = new RegExp(`\\b${pesquisa}\\b`, "i");
+    const regex = new RegExp(`(^|\\s)${pesquisa}\\b`, "i");
     return regex.test(item.title);
   });
 
@@ -28,12 +28,15 @@ function search() {
     products.innerHTML = `Nenhum produto encontrado`;
   } else {
     resultado.forEach((element) => {
+      const rating = element.rating.rate;
+      const starHtml = getStars(rating);
       products.innerHTML += `
             <div class="item ${element.category}" id="${element.id}">
               <div class="name">${element.title}</div>
               <div class="image"><img class="img" src="${element.image}"></div>
               <div class="price">R$${element.price}</div>
-              <div class="description">${element.description}</div>   
+              <div class="stars">${starHtml}</div>
+              <div class="stars">${element.rating.rate}</div>   
             </div>
             `;
       const divItem = document.querySelectorAll(".item");
@@ -70,3 +73,16 @@ searchProducts();
 window.addEventListener("pageshow", () => {
   inputPesquisa.value = ""; // Limpa o valor do campo de pesquisa
 });
+
+function getStars(rating) {
+  let starHtml = "";
+
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      starHtml += '<i class="fa fa-star"></i>';
+    } else {
+      starHtml += '<i class="fa fa-star-o"></i>';
+    }
+  }
+  return starHtml;
+}

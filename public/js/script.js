@@ -1,54 +1,7 @@
 const btnPesquisa = document.querySelector("#pesquisa");
 btnPesquisa.addEventListener("click", () => {
-  window.location.href = "pesquisa.html";
+  window.location.href = "../src/pages/pesquisa.html";
 });
-
-// function request(url, success, error) {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open("GET", url);
-//   xhr.onload = function () {
-//     if (xhr.status === 200) {
-//       success(xhr.response);
-//     } else {
-//       error(xhr.status);
-//     }
-//   };
-//   xhr.onerror = function () {
-//     error(xhr.status);
-//   };
-//   xhr.send();
-// }
-
-// request(
-//   "https://fakestoreapi.com/products",
-//   function (response) {
-//     const json = JSON.parse(response);
-//     const container = document.getElementById("products");
-//     console.log(json);
-
-//     json.forEach(function (element) {
-//       container.innerHTML += `
-//         <div class="item ${element.category}" id="${element.id}">
-//             <div class="name">${element.title}</div>
-//             <div class="image"><img class="img" src="${element.image}"></div>
-//             <div class="price">R$${element.price}</div>
-//             <div class="description">${element.description}</div>
-//         </div>
-//     `;
-
-//       const itemDiv = document.querySelectorAll(".item");
-//       itemDiv.forEach((divItem) => {
-//         divItem.addEventListener("click", () => {
-//           const itemId = divItem.id;
-//           window.location.href = `item.html?id=${itemId}`;
-//         });
-//       });
-//     });
-//   },
-//   function (errorStatus) {
-//     console.error(`Erro ao fazer a requisição: ${errorStatus}`);
-//   }
-// );
 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
@@ -57,12 +10,15 @@ fetch("https://fakestoreapi.com/products")
     console.log(json);
 
     json.forEach((element) => {
+      const rating = element.rating.rate;
+      const starHtml = getStars(rating);
       container.innerHTML += `
         <div class="item ${element.category}" id="${element.id}">
             <div class="name">${element.title}</div>
             <div class="image"><img class="img" src="${element.image}"></div>
             <div class="price">R$${element.price}</div>
-            <div class="description">${element.description}</div>
+            <div class="rating">${starHtml}</div>
+            <div>${element.rating.rate}</div>
         </div>
     `;
 
@@ -75,3 +31,16 @@ fetch("https://fakestoreapi.com/products")
       });
     });
   });
+
+function getStars(rating) {
+  let starHtml = "";
+
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      starHtml += '<i class="fa fa-star"></i>';
+    } else {
+      starHtml += '<i class="fa fa-star-o"></i>';
+    }
+  }
+  return starHtml;
+}
