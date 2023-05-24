@@ -18,13 +18,14 @@ fetch("https://fakestoreapi.com/products")
       constructor(selected);
     });
 
-    //criaçao do select de categoria
+    const categorySet = new Set();
     json.forEach((value) => {
-      category[value.category] = true;
+      categorySet.add(value.category);
     });
-    Object.keys(category).forEach((categories) => {
+
+    categorySet.forEach((category) => {
       const option = document.createElement("option");
-      option.textContent = categories;
+      option.textContent = category;
       filter.appendChild(option);
     });
 
@@ -32,16 +33,17 @@ fetch("https://fakestoreapi.com/products")
       const rating = element.rating.rate;
       const starHtml = getStars(rating);
       container.innerHTML += `
-        <div class="item ${element.category}" id="${element.id}">
+        <div class="item ${element.category}">
             <div class="name">${element.title}</div>
             <div class="image"><img class="img" src="${element.image}"></div>
             <div class="price">R$${element.price}</div>
             <div class="rating">${starHtml}</div>
             <div>${element.rating.rate}</div>
+            <button class="maisDetalhes" id="${element.id}">Mais detalhes</button>
         </div>
     `;
-      const itemDiv = document.querySelectorAll(".item");
-      itemDiv.forEach((divItem) => {
+      const maisDetalhes = document.querySelectorAll(".maisDetalhes");
+      maisDetalhes.forEach((divItem) => {
         divItem.addEventListener("click", () => {
           const itemId = divItem.id;
           window.location.href = `../src/pages/item.html?id=${itemId}`;
@@ -56,16 +58,17 @@ fetch("https://fakestoreapi.com/products")
           const rating = element.rating.rate;
           const starHtml = getStars(rating);
           container.innerHTML += `
-            <div class="item ${element.category}" id="${element.id}">
+            <div class="item ${element.category}">
                 <div class="name">${element.title}</div>
                 <div class="image"><img class="img" src="${element.image}"></div>
                 <div class="price">R$${element.price}</div>
                 <div class="rating">${starHtml}</div>
                 <div>${element.rating.rate}</div>
+                <button class="maisDetalhes" id="${element.id}">Mais detalhes</button>
             </div>
         `;
-          const itemDiv = document.querySelectorAll(".item");
-          itemDiv.forEach((divItem) => {
+          const maisDetalhes = document.querySelectorAll(".maisDetalhes");
+          maisDetalhes.forEach((divItem) => {
             divItem.addEventListener("click", () => {
               const itemId = divItem.id;
               window.location.href = `../src/pages/item.html?id=${itemId}`;
@@ -81,14 +84,22 @@ fetch("https://fakestoreapi.com/products")
           const rating = element.rating.rate;
           const starHtml = getStars(rating);
           container.innerHTML += `
-            <div class="item ${element.category}" id="${element.id}">
+            <div class="item ${element.category}">
                 <div class="name">${element.title}</div>
                 <div class="image"><img class="img" src="${element.image}"></div>
                 <div class="price">R$${element.price}</div>
                 <div class="rating">${starHtml}</div>
                 <div>${element.rating.rate}</div>
+                <button class="maisDetalhes" id="${element.id}">Mais detalhes</button>
             </div>
         `;
+          const maisDetalhes = document.querySelectorAll(".maisDetalhes");
+          maisDetalhes.forEach((divItem) => {
+            divItem.addEventListener("click", () => {
+              const itemId = divItem.id;
+              window.location.href = `../src/pages/item.html?id=${itemId}`;
+            });
+          });
         });
       }
     }
