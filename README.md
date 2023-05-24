@@ -18,16 +18,16 @@ O projeto é construido em html, css e javascript utilizando ajax em pequenas fu
 
 ### Home page
 
-*Exibição de produtos
-\_Dados retirados da api
-\_Estrelas de avaliação criadas de forma dinâmica
-*Filtro por categoria
+* Exibição de produtos
+    - Dados retirados da api
+    - Estrelas de avaliação criadas de forma dinâmica
+* Filtro por categoria
 
 ### Detalhamento os produtos
 
-*Descrição do produto
-*Demais dados referentes ao produto retirados da api
+* Descrição do produto
+* Demais dados referentes ao produto retirados da api
 
 ### Tela de pesquisa
 
-\*Pesquisa de produto por nome
+* Pesquisa de produto por nome
