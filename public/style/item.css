@@ -112,6 +112,7 @@ main {
 
 #buy {
     display: flex;
+    position: relative;
     bottom: 0;
 }
 
