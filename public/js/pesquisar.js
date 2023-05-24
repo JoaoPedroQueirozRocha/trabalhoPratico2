@@ -56,19 +56,20 @@ function search() {
       const rating = element.rating.rate;
       const starHtml = getStars(rating);
       products.innerHTML += `
-            <div class="item ${element.category}" id="${element.id}">
+            <div class="item ${element.category}"   >
               <div class="name">${element.title}</div>
               <div class="image"><img class="img" src="${element.image}"></div>
               <div class="price">R$${element.price}</div>
               <div class="stars">${starHtml}</div>
-              <div class="stars">${element.rating.rate}</div>   
+              <div class="stars">${element.rating.rate}</div> 
+              <button class="maisDetalhes" id="${element.id}">Mais detalhes</button>  
             </div>
             `;
-      const divItem = document.querySelectorAll(".item");
-      divItem.forEach((item) => {
-        item.addEventListener("click", () => {
-          const itemId = item.id;
-          window.location.href = `item.html?id=${itemId}`;
+      const maisDetalhes = document.querySelectorAll(".maisDetalhes");
+      maisDetalhes.forEach((divItem) => {
+        divItem.addEventListener("click", () => {
+          const itemId = divItem.id;
+          window.location.href = `../../src/pages/item.html?id=${itemId}`;
         });
       });
     });

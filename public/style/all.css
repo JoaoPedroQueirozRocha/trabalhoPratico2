@@ -1,0 +1,110 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gray;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    position: sticky;
+    height: 10vh;
+    background-color: #2055a5;
+    padding: 0 15px 0 15px;
+}
+
+#logo {
+    height: 20vh;
+}
+
+#containerHeader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#products {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 10px;
+    width: 20%;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    border-radius: 6px;
+    padding: 6px;
+    gap: 4px;
+    background-color: #ffffff;
+}
+
+.fa-star,
+.fa-star-o,
+.fa-star-half {
+    color: #e0a31f;
+}
+
+.name {
+    font-size: large;
+    display: flex;
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    /* height: 20vh; */
+
+}
+
+.img {
+    width: 100%;
+    /* margin: 10%; */
+    height: 20vh;
+}
+
+.price {
+    align-self: center;
+    color: green;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.description {
+    font-size: medium;
+}
+
+.maisDetalhes{
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: medium;
+    background-color: #3caef0;
+}
+
+.maisDetalhes:hover{
+    background-color: #128ed6;
+    transition: 650ms;
+}
