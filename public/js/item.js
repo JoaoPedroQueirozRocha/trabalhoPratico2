@@ -12,7 +12,11 @@ fetch(`https://fakestoreapi.com/products/${itemId}`)
               <div class="image"><img class="img" src="${element.image}"></div>
             </div>
             <div id="details">
-              <div class="description">${element.description}</div>               
+              <h2>Descrição</h2>
+              <div class="description">${
+                element.description.charAt(0).toUpperCase() +
+                element.description.slice(1)
+              }</div>               
               <div id="buy">
                 <button id="btnComprar">Comprar</button>
                 <div class="price">R$${element.price}</div>
