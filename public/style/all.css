@@ -50,7 +50,6 @@ header {
     justify-items: center;
     margin: 10px;
     width: 20%;
-    /* border: 1px solid black; */
     flex-wrap: wrap;
     border-radius: 6px;
     padding: 6px;
@@ -96,7 +95,7 @@ header {
     font-size: medium;
 }
 
-.maisDetalhes{
+.maisDetalhes {
     border: none;
     border-radius: 6px;
     padding: 10px;
@@ -104,7 +103,7 @@ header {
     background-color: #3caef0;
 }
 
-.maisDetalhes:hover{
+.maisDetalhes:hover {
     background-color: #128ed6;
     transition: 650ms;
 }
