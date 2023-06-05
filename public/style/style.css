@@ -1,5 +1,3 @@
-
-
 #pesquisa {
     position: relative;
     display: flex;
@@ -35,7 +33,7 @@ main {
     margin-top: 2%;
 }
 
-#divFilter{
+#divFilter {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -43,12 +41,12 @@ main {
     margin: 5px;
 }
 
-#divFilter label{
+#divFilter label {
     font-size: large;
     margin-right: 15px;
 }
 
-#divFilter select{
+#divFilter select {
     padding: 5px;
     border: none;
     border-radius: 6px;
