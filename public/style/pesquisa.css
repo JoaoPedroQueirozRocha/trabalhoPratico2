@@ -121,3 +121,6 @@ footer {
     color: #e0a31f;
 }
 
+.textDescription:hover {
+    cursor: pointer;
+}
