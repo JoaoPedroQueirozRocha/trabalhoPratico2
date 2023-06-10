@@ -110,5 +110,23 @@ header {
 
 .description {
     height: 20vh;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0px 10px;
+}
+
+.description::-webkit-scrollbar {
+    width: 6px;
+    /* width of the entire scrollbar */
+}
+
+.description::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .item {
+        width: 100%;
+    }
 }

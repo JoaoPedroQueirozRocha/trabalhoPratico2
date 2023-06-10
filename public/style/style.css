@@ -73,30 +73,40 @@ footer {
     flex-direction: column;
 }
 
-@media only screen and (max-width: 1060px) {
+.description {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
     #pesquisa {
-        width: 12%;
+        width: 14%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    #pesquisa {
+        width: 16%;
     }
 }
 
 @media only screen and (max-width: 860px) {
     #pesquisa {
-        width: 14%;
-    }
-
-}
-
-@media only screen and (max-width: 770px) {
-    #pesquisa {
-        width: 16%;
+        width: 18%;
     }
 }
 
 @media only screen and (max-width: 740px) {
     #pesquisa {
-        width: 16%;
+        width: 100%;
     }
 }
+
+@media only screen and (max-width: 770px) {
+    #pesquisa {
+        width: 18%;
+    }
+}
+
 
 @media only screen and (max-width: 687px) {
     #pesquisa {
@@ -104,7 +114,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 500px) {
     #pesquisa {
         width: 24%;
     }
@@ -116,7 +126,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 450px) {
     #pesquisa {
         width: 30%;
     }

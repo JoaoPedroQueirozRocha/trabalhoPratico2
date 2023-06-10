@@ -55,6 +55,12 @@ fetch("http://diwserver.vps.webdock.cloud:8765/products")
           window.location.href = `../src/pages/item.html?id=${itemId}`;
         });
       });
+      const description = document.querySelectorAll(".description");
+      description.forEach((element) => {
+        element.addEventListener("click", (event) => {
+          console.log(event.target.parentNode.id);
+        });
+      });
     });
 
     //Função para reenderizar os produtos de acordo com a categoria
@@ -68,7 +74,7 @@ fetch("http://diwserver.vps.webdock.cloud:8765/products")
                 <div class="name">${element.title}</div>
                 <div class="image"><img class="img" src="${element.image}"></div>
                 <div class="price">R$${element.price}</div>
-                <div class="description">${element.description}</div>
+                <div class="description" id="${element.id}">${element.description}</div>
                 <button class="maisDetalhes" id="${element.id}">Mais detalhes</button>
             </div>
         `);
