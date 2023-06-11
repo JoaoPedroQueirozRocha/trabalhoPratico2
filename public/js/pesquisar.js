@@ -35,7 +35,7 @@ $(document).ready(() => {
 });
 
 function search(pesquisado) {
-  let api = `http://diwserver.vps.webdock.cloud:8765/products/search?query=${pesquisado}`;
+  let api = `https://diwserver.vps.webdock.cloud/products/search?query=${pesquisado}`;
   $.ajax({
     url: api,
     type: "GET",

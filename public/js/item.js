@@ -6,7 +6,7 @@ btnPesquisa.addEventListener("click", () => {
   window.location.href = "../../src/pages/pesquisa.html";
 });
 
-fetch(`http://diwserver.vps.webdock.cloud:8765/products/${itemId}`)
+fetch(`https://diwserver.vps.webdock.cloud/products/${itemId}`)
   .then((res) => res.json())
   .then((json) => {
     $("#produto").html(`
