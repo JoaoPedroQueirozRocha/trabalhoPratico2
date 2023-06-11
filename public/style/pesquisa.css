@@ -68,10 +68,11 @@ main {
 }
 
 #searchBar button {
-    padding: 8px;
+    padding: 3px;
     font-size: larger;
     border: none;
     border-radius: 0px 6px 6px 0px;
+    background-color: white;
 }
 
 #produtos {

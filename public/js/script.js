@@ -7,7 +7,7 @@ btnPesquisa.addEventListener("click", () => {
 });
 
 //fetch da api
-fetch("http://diwserver.vps.webdock.cloud:8765/products")
+fetch("https://diwserver.vps.webdock.cloud/products")
   .then((res) => res.json())
   .then((json) => {
     const data = json.products;
