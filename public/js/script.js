@@ -3,7 +3,7 @@ const filter = document.getElementById("filter");
 
 const btnPesquisa = document.querySelector("#pesquisa");
 btnPesquisa.addEventListener("click", () => {
-  window.location.href = "../src/pages/pesquisa";
+  window.location.href = "../pages/pesquisa";
 });
 
 //fetch da api
@@ -52,7 +52,7 @@ fetch("https://diwserver.vps.webdock.cloud/products")
       maisDetalhes.forEach((divItem) => {
         divItem.addEventListener("click", () => {
           const itemId = divItem.id;
-          window.location.href = `../src/pages/item?id=${itemId}`;
+          window.location.href = `../pages/item?id=${itemId}`;
         });
       });
       const description = document.querySelectorAll(".description");
@@ -83,7 +83,7 @@ fetch("https://diwserver.vps.webdock.cloud/products")
           maisDetalhes.forEach((divItem) => {
             divItem.addEventListener("click", () => {
               const itemId = divItem.id;
-              window.location.href = `../src/pages/item?id=${itemId}`;
+              window.location.href = `../pages/item?id=${itemId}`;
             });
           });
         });
@@ -109,7 +109,7 @@ fetch("https://diwserver.vps.webdock.cloud/products")
           maisDetalhes.forEach((divItem) => {
             divItem.addEventListener("click", () => {
               const itemId = divItem.id;
-              window.location.href = `../src/pages/item?id=${itemId}`;
+              window.location.href = `../pages/item?id=${itemId}`;
             });
           });
         });
