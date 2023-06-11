@@ -3,7 +3,7 @@ const filter = document.getElementById("filter");
 
 const btnPesquisa = document.querySelector("#pesquisa");
 btnPesquisa.addEventListener("click", () => {
-  window.location.href = "/src/pages/pesquisa";
+  window.location.href = "./src/pages/pesquisa";
 });
 
 //fetch da api
