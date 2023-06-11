@@ -65,7 +65,7 @@ function showResults(response) {
     maisDetalhes.forEach((divItem) => {
       divItem.addEventListener("click", () => {
         const itemId = divItem.id;
-        window.location.href = `../../src/pages/item.html?id=${itemId}`;
+        window.location.href = `../../src/pages/item?id=${itemId}`;
       });
     });
   });
