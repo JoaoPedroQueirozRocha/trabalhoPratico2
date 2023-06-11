@@ -144,8 +144,95 @@ footer {
     flex-direction: column;
 }
 
+#pesquisa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 3%;
+    width: 10%;
+    font-size: larger;
+    height: 5vh;
+    border-radius: 6px;
+    border: none;
+    background-color: lightgray;
+}
+
+#pesquisa:hover {
+    cursor: pointer;
+    transition: 650ms;
+    background-color: #b1adad;
+}
+
+#iconSearch {
+    width: fit-content;
+    height: 4vh;
+}
+
 @media only screen and (max-width: 900px) {
     .item {
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #pesquisa {
+        width: 14%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+    #pesquisa {
+        width: 16%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    #pesquisa {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    #pesquisa {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #pesquisa {
+        width: 18%;
+    }
+}
+
+
+@media only screen and (max-width: 687px) {
+    #pesquisa {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #pesquisa {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    #pesquisa {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #pesquisa {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #iconSearch {
+        display: none;
     }
 }
